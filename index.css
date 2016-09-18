@@ -1,0 +1,24 @@
+*{ margin:0; padding:0;margin-top:10px; text-align:center;font-size:22px;}
+body{
+	margin:0 auto;
+}
+a{
+	text-decoration:none;
+	margin:5px;
+}
+#content{
+	margin:0 auto;
+}
+#a,#b{ width:50%; float:left; text-align:center;
+}
+#a ul,#b ul{ width:50%; float:left;}
+ul{
+	float:left;
+}
+li{
+	list-style:none;
+	
+}
+footer{
+	margin-top:42px;
+}
