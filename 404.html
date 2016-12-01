@@ -1,47 +1,36 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+﻿<!doctype html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>这个.. 页面没有找到！！</title>
-		
-		<style type="text/css">
-			body{ margin:0; padding:0; background:#efefef; font-family:Georgia, Times, Verdana, Geneva, Arial, Helvetica, sans-serif; }
-			div#mother{ margin:0 auto; width:943px; height:572px; position:relative; }
-			div#errorBox{ background: url(404_bg.png) no-repeat top left; width:943px; height:572px; margin:auto; }
-			div#errorText{ color:#39351e; padding:146px 0 0 446px }
-			div#errorText p{ width:303px; font-size:14px; line-height:26px; }
-			div.link{ /*background:#f90;*/ height:50px; width:145px; float:left; }
-			div#home{ margin:20px 0 0 444px;}
-			div#contact{ margin:20px 0 0 25px;}
-			h1{ font-size:40px; margin-bottom:35px; }
-		</style>
-		
-
-		
-	</head>
-	<body>
-		<div id="mother">
-			<div id="errorBox">
-				<div id="errorText">
-					<h1>Sorry..页面没有找到！</h1>
-					<p>
-						似乎你所寻找的网页已移动或丢失了。
-						<p>或者也许你只是键入错误了一些东西。</p>
-						请不要担心，这没事。如果该资源对你很重要，请与管理员联系。
-					</p>
-
-					<p>
-						火星不太安全，我可以免费送你回地球
-					</p>
-				</div>
-				<a href="/" title="返回SJ5D首页">
-					<div class="link" id="home"></div>
-				</a>
-				<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=NFBdWlNcUVdcVVt0RUUaV1tZ" title="联系管理员">
-					<div class="link" id="contact"></div>
-
-				</a>
-			</div>
-		</div>
-	</body>
+<head>
+<meta charset="utf-8">
+<title>404 —— 页面不存在</title>
+<link rel="stylesheet" type="text/css" href="http://obj.iaozi.com/css/error.css">
+<script type="text/javascript">
+	var num=6;
+	function redirect(){
+		num--;
+		document.getElementById("num").innerHTML=num;
+		if(num<0){
+			document.getElementById("num").innerHTML=0;
+			location.href="/";
+			}
+		}
+	setInterval("redirect()", 1000);
+</script>
+</head>
+<body onLoad="redirect();">
+<div class="whole">
+	<img src="http://obj.iaozi.com/images/bj.jpg" />
+    <div class="mask"></div>
+</div>
+<div class="b">
+		<img src="http://obj.iaozi.com/images/404.png" class="center"/>
+		<p>
+			暂时未能找到您查找的页面<br>
+			可能输入的网址错误或此页面不存在<br>Not Found
+			<br>
+            <span id="num"></span>秒后自动跳转到主页
+		</p>
+	</div>
+<div class="c">技术支持：<a href="http://iaozi.com" target="_blank" >艾奥兹</a></div>
+</body>
 </html>
